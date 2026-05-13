@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stacking</title>
+    <link rel="stylesheet" href="stacking.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Stacking</p>
+          <h1>Build the Tower</h1>
+        </div>
+        <nav class="game-nav" aria-label="Games">
+          <a href="index.html">Color by Number</a>
+          <a href="snake.html">Snake</a>
+          <a href="coloring.html">Coloring</a>
+        </nav>
+      </section>
+
+      <section class="game-layout">
+        <canvas id="gameCanvas" width="520" height="720" aria-label="Stacking game board"></canvas>
+        <aside class="panel">
+          <div class="score-grid">
+            <div>
+              <span>Score</span>
+              <strong id="score">0</strong>
+            </div>
+            <div>
+              <span>Best</span>
+              <strong id="bestScore">0</strong>
+            </div>
+          </div>
+          <button id="dropButton" type="button">Drop</button>
+          <button id="restartButton" type="button">Restart</button>
+          <p id="status" role="status" aria-live="polite">Press Drop or Space to start.</p>
+        </aside>
+      </section>
+    </main>
+
+    <script src="stacking.js"></script>
+  </body>
+</html>
