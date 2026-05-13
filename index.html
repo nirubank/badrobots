@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color by Number</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="top-bar" aria-label="Game controls">
+        <div>
+          <p class="eyebrow">Color by Number</p>
+          <h1 id="puzzleTitle">Sunny Garden</h1>
+        </div>
+        <div class="controls">
+          <a class="game-link" href="snake.html">Snake</a>
+          <a class="game-link" href="coloring.html">Coloring</a>
+          <label class="select-wrap">
+            <span>Puzzle</span>
+            <select id="puzzleSelect"></select>
+          </label>
+          <button id="hintButton" type="button" title="Fill one matching square">Hint</button>
+          <button id="resetButton" type="button" title="Clear this puzzle">Reset</button>
+        </div>
+      </section>
+
+      <section class="game-area">
+        <aside class="palette-panel" aria-label="Color palette">
+          <div class="meter">
+            <div class="meter-row">
+              <span>Progress</span>
+              <strong id="progressLabel">0%</strong>
+            </div>
+            <div class="track" aria-hidden="true">
+              <div id="progressFill"></div>
+            </div>
+          </div>
+          <div id="palette" class="palette"></div>
+        </aside>
+
+        <section class="board-panel">
+          <div id="board" class="board" aria-label="Coloring board"></div>
+          <div id="message" class="message" role="status" aria-live="polite">
+            Pick a color, then fill every square with that number.
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

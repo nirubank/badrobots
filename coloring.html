@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coloring</title>
+    <link rel="stylesheet" href="coloring.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Coloring</p>
+          <h1 id="pictureTitle">Happy Flower</h1>
+        </div>
+        <nav class="game-nav" aria-label="Games">
+          <a href="index.html">Color by Number</a>
+          <a href="snake.html">Snake</a>
+        </nav>
+      </section>
+
+      <section class="workspace">
+        <aside class="tools" aria-label="Coloring tools">
+          <label class="field">
+            <span>Picture</span>
+            <select id="pictureSelect"></select>
+          </label>
+
+          <div>
+            <p class="tool-label">Colors</p>
+            <div id="palette" class="palette"></div>
+          </div>
+
+          <div class="actions">
+            <button id="eraserButton" type="button">Eraser</button>
+            <button id="clearButton" type="button">Clear</button>
+            <button id="saveButton" type="button">Save</button>
+          </div>
+        </aside>
+
+        <section class="canvas-wrap">
+          <svg id="coloringPage" viewBox="0 0 640 640" role="img" aria-label="Coloring picture"></svg>
+          <p id="status" role="status" aria-live="polite">Choose a color and tap a shape.</p>
+        </section>
+      </section>
+    </main>
+
+    <script src="coloring.js"></script>
+  </body>
+</html>
