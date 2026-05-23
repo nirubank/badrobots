@@ -3,27 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stacking</title>
-    <link rel="stylesheet" href="stacking.css" />
+    <title>Suika Game</title>
+    <link rel="stylesheet" href="suika.css" />
   </head>
   <body>
     <main class="app">
       <section class="topbar">
         <div>
-          <p class="eyebrow">Stacking</p>
-          <h1>Build the Tower</h1>
+          <p class="eyebrow">Suika Game</p>
+          <h1>Fruit Merge</h1>
         </div>
         <nav class="game-nav" aria-label="Games">
           <a href="index.html">Color by Number</a>
           <a href="snake.html">Snake</a>
           <a href="coloring.html">Coloring</a>
+          <a href="stacking.html">Stacking</a>
           <a href="tom-and-cherry.html">Tom and Cherry</a>
-          <a href="suika.html">Suika</a>
         </nav>
       </section>
 
       <section class="game-layout">
-        <canvas id="gameCanvas" width="520" height="720" aria-label="Stacking game board"></canvas>
+        <canvas id="gameCanvas" width="520" height="720" aria-label="Suika fruit merge game board"></canvas>
         <aside class="panel">
           <div class="score-grid">
             <div>
@@ -35,13 +35,17 @@
               <strong id="bestScore">0</strong>
             </div>
           </div>
+          <div class="next-card">
+            <span>Next</span>
+            <canvas id="nextCanvas" width="120" height="90" aria-label="Next fruit"></canvas>
+          </div>
           <button id="dropButton" type="button">Drop</button>
           <button id="restartButton" type="button">Restart</button>
-          <p id="status" role="status" aria-live="polite">Press Drop or Space to start.</p>
+          <p id="status" role="status" aria-live="polite">Move with arrows or your pointer. Drop fruit to merge matches.</p>
         </aside>
       </section>
     </main>
 
-    <script src="stacking.js"></script>
+    <script src="suika.js"></script>
   </body>
 </html>
