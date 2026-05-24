@@ -3,52 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tom and Cherry</title>
-    <link rel="stylesheet" href="tom-and-cherry.css" />
+    <title>ballrun2048</title>
+    <link rel="stylesheet" href="ballrun2048.css" />
   </head>
   <body>
     <main class="app">
       <section class="topbar">
         <div>
-          <p class="eyebrow">Tom and Cherry</p>
-          <h1>Cherry Dash</h1>
+          <p class="eyebrow">ballrun2048</p>
+          <h1>Number Roll</h1>
         </div>
         <nav class="game-nav" aria-label="Games">
           <a href="index.html">Color by Number</a>
           <a href="snake.html">Snake</a>
           <a href="coloring.html">Coloring</a>
           <a href="stacking.html">Stacking</a>
+          <a href="tom-and-cherry.html">Tom and Cherry</a>
           <a href="suika.html">Suika</a>
-          <a href="ballrun2048.html">ballrun2048</a>
         </nav>
       </section>
 
       <section class="game-layout">
-        <canvas id="gameCanvas" width="640" height="480" aria-label="Tom and Cherry game board"></canvas>
+        <canvas id="gameCanvas" width="520" height="720" aria-label="ballrun2048 game board"></canvas>
         <aside class="panel">
           <div class="score-grid">
             <div>
-              <span>Score</span>
-              <strong id="score">0</strong>
+              <span>Ball</span>
+              <strong id="valueLabel">2</strong>
             </div>
             <div>
-              <span>Lives</span>
-              <strong id="lives">3</strong>
+              <span>Best</span>
+              <strong id="bestLabel">2</strong>
             </div>
           </div>
           <button id="startButton" type="button">Start</button>
           <button id="restartButton" type="button">Restart</button>
-          <p id="status" role="status" aria-live="polite">Collect cherries and dodge the bouncing jars.</p>
+          <p id="status" role="status" aria-live="polite">Steer into matching numbers to merge. Reach 2048.</p>
           <div class="pad" aria-label="Move controls">
-            <button data-dir="up" type="button">Up</button>
             <button data-dir="left" type="button">Left</button>
             <button data-dir="right" type="button">Right</button>
-            <button data-dir="down" type="button">Down</button>
           </div>
         </aside>
       </section>
     </main>
 
-    <script src="tom-and-cherry.js"></script>
+    <script src="ballrun2048.js"></script>
   </body>
 </html>
