@@ -3,47 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stacking</title>
-    <link rel="stylesheet" href="stacking.css" />
+    <title>Stacking Cards</title>
+    <link rel="stylesheet" href="stacking-cards.css" />
   </head>
   <body>
     <main class="app">
       <section class="topbar">
         <div>
-          <p class="eyebrow">Stacking</p>
-          <h1>Build the Tower</h1>
+          <p class="eyebrow">Stacking Cards</p>
+          <h1>Card Tower</h1>
         </div>
         <nav class="game-nav" aria-label="Games">
           <a href="index.html">Color by Number</a>
           <a href="snake.html">Snake</a>
           <a href="coloring.html">Coloring</a>
+          <a href="stacking.html">Stacking</a>
           <a href="tom-and-cherry.html">Tom and Cherry</a>
           <a href="suika.html">Suika</a>
           <a href="ballrun2048.html">ballrun2048</a>
-          <a href="stacking-cards.html">Stacking Cards</a>
         </nav>
       </section>
 
       <section class="game-layout">
-        <canvas id="gameCanvas" width="520" height="720" aria-label="Stacking game board"></canvas>
+        <canvas id="gameCanvas" width="540" height="720" aria-label="Stacking Cards game board"></canvas>
         <aside class="panel">
           <div class="score-grid">
             <div>
-              <span>Score</span>
-              <strong id="score">0</strong>
+              <span>Cards</span>
+              <strong id="cardsLabel">0</strong>
             </div>
             <div>
               <span>Best</span>
-              <strong id="bestScore">0</strong>
+              <strong id="bestLabel">0</strong>
             </div>
           </div>
-          <button id="dropButton" type="button">Drop</button>
+          <div class="balance">
+            <span>Balance</span>
+            <div class="track" aria-hidden="true"><div id="balanceFill"></div></div>
+          </div>
+          <button id="dropButton" type="button">Drop Card</button>
           <button id="restartButton" type="button">Restart</button>
-          <p id="status" role="status" aria-live="polite">Press Drop or Space to start.</p>
+          <p id="status" role="status" aria-live="polite">Drop cards as close to center as you can.</p>
         </aside>
       </section>
     </main>
 
-    <script src="stacking.js"></script>
+    <script src="stacking-cards.js"></script>
   </body>
 </html>
